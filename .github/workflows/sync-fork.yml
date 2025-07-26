@@ -27,8 +27,8 @@ jobs:
 
       - name: Checkout main branch
         run: |
-          git checkout main
-          echo "✅ Switched to main branch"
+          git checkout dev
+          echo "✅ Switched to dev branch"
 
       - name: Log status before merge
         run: |
@@ -39,7 +39,7 @@ jobs:
 
       - name: Merge upstream/main into fork
         run: |
-          git merge upstream/main || echo "No changes to merge"
+          git merge upstream/dev || echo "No changes to merge"
           echo "✅ Merge attempt complete"
 
       - name: Log status after merge
